@@ -1,6 +1,8 @@
 package com.rental_apps.android.rental_apps.user;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
 import com.pixplicity.easyprefs.library.Prefs;
 import com.rental_apps.android.rental_apps.R;
@@ -43,6 +46,7 @@ public class UserHistoryTransaksi extends Fragment implements InitComponent {
 
     //Declare Component View
     private TextView mTxtTitle;
+    private FloatingActionButton buttonwa;
     private View rootView;
     private RecyclerView recyclerHistory;
     //Declate Activity Context
@@ -132,6 +136,17 @@ public class UserHistoryTransaksi extends Fragment implements InitComponent {
     public void initUI() {
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT ));
         recyclerHistory= (RecyclerView)rootView.findViewById(R.id.rTransaksiList);
+        buttonwa = (FloatingActionButton) rootView.findViewById(R.id.btn_wa);
+
+        buttonwa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("smsto:" + "081330726003");
+                Intent i = new Intent(Intent.ACTION_SENDTO, uri);
+                i.setPackage("com.whatsapp");
+                startActivity(i);
+            }
+        });
     }
 
     @Override
