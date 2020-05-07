@@ -13,7 +13,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 import com.rental_apps.android.rental_apps.ActivityLogin;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
-//import com.rental_apps.android.rental_apps.admin.AdminEditProfile;
+
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.utils.move;
 import com.squareup.picasso.Picasso;
@@ -80,7 +80,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
 
         switch (position){
             case 0:
-//                mFragment = UserHistoryTransaksi.newInstance(mHelpLiveo.get(position).getName());
+                mFragment = UserHistoryTransaksi.newInstance(mHelpLiveo.get(position).getName());
                 break;
             case 1:
 //                mFragment = UserListCars.newInstance(mHelpLiveo.get(position).getName());
@@ -118,7 +118,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
         @Override
         public void onClick(View v) {
             closeDrawer();
-//            move.moveActivity(mContext,AdminEditProfile.class);
+
         }
     };
 
