@@ -29,8 +29,13 @@
             android:name=".user.UserMain"
             android:screenOrientation="portrait"
             android:theme="@style/nLiveoDrawer" />
+        <activity
+            android:name=".admin.AdminEditProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDetail" />
         <activity android:name=".user.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+
     </application>
 
 </manifest>
