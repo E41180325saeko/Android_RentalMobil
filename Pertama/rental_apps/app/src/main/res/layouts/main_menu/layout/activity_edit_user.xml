@@ -160,7 +160,7 @@
             android:layout_gravity="center"
             android:background="#00000000"
             android:textAlignment="textEnd"
-            />
+            tools:ignore="RtlCompat" />
 
     </LinearLayout>
     <View
@@ -190,7 +190,7 @@
             android:layout_gravity="center"
             android:background="#00000000"
             android:textAlignment="textEnd"
-            />
+            tools:ignore="RtlCompat" />
 
     </LinearLayout>
     <View
@@ -220,7 +220,7 @@
             android:layout_gravity="center"
             android:background="#00000000"
             android:textAlignment="textEnd"
-            />
+            tools:ignore="RtlCompat" />
 
     </LinearLayout>
 

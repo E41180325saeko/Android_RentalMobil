@@ -84,7 +84,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
                 mFragment = UserHistoryTransaksi.newInstance(mHelpLiveo.get(position).getName());
                 break;
             case 1:
-//                mFragment = UserListCars.newInstance(mHelpLiveo.get(position).getName());
+                mFragment = UserListCars.newInstance(mHelpLiveo.get(position).getName());
                 break;
         }
         if (mFragment != null){

@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ActivityLogin"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,15 +23,19 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".user.ActivityDetailUserCars"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppDetail" />
+        <activity
             android:name=".ActivityRegister"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".user.UserMain"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/nLiveoDrawer" />
         <activity
             android:name=".admin.AdminEditProfile"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/AppDetail" />
         <activity android:name=".user.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>

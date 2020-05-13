@@ -1,7 +1,5 @@
 package com.rental_apps.android.rental_apps.admin;
 
-
-
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -50,7 +48,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 
 
 public class AdminEditProfile extends AppCompatActivity implements InitComponent, View.OnClickListener {
@@ -155,7 +152,9 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
 
         status.setText("Aktif");
 
-
+//        if(!Prefs.getString(SPref.getPHOTO(),null).isEmpty())
+//
+// Picasso.with(mContext).load(client.getBaseUrlImage()+Prefs.getString(SPref.getPHOTO(),null)).into(userPhoto);
 
 
     }
@@ -215,11 +214,11 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
                 break;
             case R.id.jkl:
                 JK="L";
-
+//                rbp.setChecked(false);
                 break;
             case R.id.jkp:
                 JK="P";
-
+//                rbl.setChecked(false);
                 break;
             case R.id.btn_update:
                 if(validasi())
@@ -236,7 +235,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
         pDialog.show();
 
         Call<ResponseRegister> register;
-
+//        Toasty.success(mContext,Prefs.getString(SPref.getIdUser(),""),Toast.LENGTH_SHORT).show();
 
         register = client.getApi().userUpdate(""+Prefs.getInt(SPref.getIdUser(),0),name.getText().toString(),
                 nik.getText().toString(),
@@ -330,7 +329,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
                     File photo = null;
                     try
                     {
-
+                        // place where to store camera taken picture
                         photo = this.createTemporaryFile("picture", ".jpg");
                         photo.delete();
                     }
@@ -344,7 +343,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
                     startActivityForResult(cameraIntent, REQUEST_CAMERA);
                 } else if (items[item].equals("Choose from Gallery")) {
                     Intent intent = new Intent();
-                    intent.setType("image/*");
+                    intent.setType("image/*"); //set type for files (image type)
                     intent.setAction(Intent.ACTION_GET_CONTENT);
                     startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_FROM_GALLERY);
                 } else if (items[item].equals("Cancel")) {
@@ -401,14 +400,17 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+//                selectedImage = getImageUri(getApplicationContext(), photo);
+//                filePath=getRealPathFromURI(selectedImage);
+//                setImageView(filePath);
 
             } else if (resultCode == RESULT_CANCELED) {
-
+                // user cancelled Image capture
                 Toast.makeText(getApplicationContext(),
                         "User cancelled image capture", Toast.LENGTH_SHORT)
                         .show();
             } else {
-
+                // failed to capture image
                 Toast.makeText(getApplicationContext(),
                         "Sorry! Failed to capture image", Toast.LENGTH_SHORT)
                         .show();
@@ -416,7 +418,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
         }else if(requestCode==PICK_FROM_GALLERY){
             if (resultCode==RESULT_OK){
                 selectedImage = data.getData();
-
+//                tampil_gambar_sk_hilang.setImageURI(selectedImage);
                 filePath = getRealPathFromURIPath(selectedImage, this);
                 setImageView(filePath);
             }
@@ -428,7 +430,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
         File imgFile = new  File(filepath);
         Bitmap bm = BitmapFactory.decodeFile(filepath);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bm.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        bm.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
         byte[] ba = baos.toByteArray();
         encodedImage = Base64.encodeToString(ba, Base64.DEFAULT);
 
@@ -445,23 +447,38 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
 
                 float sc = 0.0f;
                 int scale = 1;
-
+                //if image height is greater than width
                 if (o.outHeight > o.outWidth) {
                     sc = o.outHeight / 400;
                     scale = Math.round(sc);
                 }
-
+                //if image width is greater than height
                 else {
                     sc = o.outWidth / 400;
                     scale = Math.round(sc);
                 }
 
-
+                // Decode with inSampleSize
                 BitmapFactory.Options o2 = new BitmapFactory.Options();
                 o2.inSampleSize = scale;
                 fis = new FileInputStream(f);
                 b = BitmapFactory.decodeStream(fis, null, o2);
-
+//                if (ketImage==1) {
+//                    tampil_gambar_rt.setImageBitmap(b);
+//                    listOfImagesPath.set(0,filepath);
+//                }else if (ketImage==2) {
+//                    tampil_gambar_kk.setImageBitmap(b);
+//                    listOfImagesPath.set(1,filepath);
+//                }else if (ketImage==3) {
+//                    tampil_gambar_nikah.setImageBitmap(b);
+//                    listOfImagesPath.set(2,filepath);
+//                }else if (ketImage==4) {
+//                    tampil_gambar_akta.setImageBitmap(b);
+//                    listOfImagesPath.set(3,filepath);
+//                }else if (ketImage==5) {
+//                    tampil_gambar_master_kk.setImageBitmap(b);
+//                    listOfImagesPath.set(4,filepath);
+//                }
                 userPhoto.setImageBitmap(b);
 
                 fis.close();
