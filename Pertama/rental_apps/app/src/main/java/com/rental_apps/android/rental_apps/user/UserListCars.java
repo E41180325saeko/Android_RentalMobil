@@ -22,7 +22,7 @@ import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
 import com.rental_apps.android.rental_apps.adapter.CarsUserAdapter;
-//import com.rental_apps.android.rental_apps.adapter.Carts;
+import com.rental_apps.android.rental_apps.adapter.Carts;
 //import com.rental_apps.android.rental_apps.admin.ActivityCreateMobil;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.helper.DrawableCounter;
@@ -39,9 +39,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 
 public class UserListCars extends Fragment implements InitComponent {
@@ -111,7 +109,7 @@ public class UserListCars extends Fragment implements InitComponent {
             badge = new DrawableCounter(mContext);
         }
 
-        //badge.setCount(""+Carts.getSize(SPref.getCARTS()));
+        badge.setCount(""+Carts.getSize(SPref.getCARTS()));
         icon.mutate();
         icon.setDrawableByLayerId(R.id.ic_group_count, badge);
     }
@@ -123,9 +121,9 @@ public class UserListCars extends Fragment implements InitComponent {
             case R.id.refresh:
                 getCars();
                 return true;
-//            case R.id.cart:
-//                move.moveActivity(mContext,ActivityListTransaksi.class);
-//                return true;
+            case R.id.cart:
+                move.moveActivity(mContext,ActivityListTransaksi.class);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

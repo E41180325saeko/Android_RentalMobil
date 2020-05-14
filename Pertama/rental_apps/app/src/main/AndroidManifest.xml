@@ -37,6 +37,11 @@
             android:name=".admin.AdminEditProfile"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppDetail" />
+        <activity
+            android:name=".user.ActivityListTransaksi"
+            android:label="List Mobil"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
         <activity android:name=".user.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 

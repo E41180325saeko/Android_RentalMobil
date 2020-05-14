@@ -7,6 +7,7 @@ import com.rental_apps.android.rental_apps.model.model_user.ResponseLogin;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseRegister;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseUser;
 import com.rental_apps.android.rental_apps.model.model_mobil.DataCars;
+import com.rental_apps.android.rental_apps.model.model_transaksi.ResponseRegisterTransaksi;
 
 import org.json.JSONStringer;
 
@@ -96,6 +97,13 @@ public interface request{
     Call<ResponseUser> dataUser(
             @Path("GROUP_USER") Integer GROUP_USER,
             @Path("ID_USER") Integer ID_USER
+    );
+
+    @FormUrlEncoded
+    @POST("Api/pesanan")
+    Call<ResponseRegisterTransaksi> checkout(@Field("ID_USER") String ID_USER,
+                                             @Field("TOTAL_PEMBAYARAN") String TOTAL_PEMBAYARAN,
+                                             @Field("LIST_CART") String LIST_CART
     );
 
 

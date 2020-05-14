@@ -24,13 +24,13 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
-//import com.rental_apps.android.rental_apps.adapter.Carts;
+import com.rental_apps.android.rental_apps.adapter.Carts;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.helper.DateDifference;
 import com.rental_apps.android.rental_apps.helper.DatePickerView;
 import com.rental_apps.android.rental_apps.helper.DrawableColor;
 import com.rental_apps.android.rental_apps.helper.DrawableCounter;
-//import com.rental_apps.android.rental_apps.model.model_carts.DataCarts;
+import com.rental_apps.android.rental_apps.model.model_carts.DataCarts;
 import com.rental_apps.android.rental_apps.model.model_mobil.DataCars;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
 import com.rental_apps.android.rental_apps.utils.move;
@@ -42,9 +42,7 @@ import java.util.Calendar;
 import customfonts.MyTextView;
 import es.dmoral.toasty.Toasty;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class ActivityDetailUserCars extends AppCompatActivity implements InitComponent, View.OnClickListener{
     private Context mContext;
@@ -236,7 +234,7 @@ public class ActivityDetailUserCars extends AppCompatActivity implements InitCom
                 if (validasi()){
 
                     if ((DateDifference.betweenDates(tgl_awal.getText().toString(),tgl_akhir.getText().toString())+1)>1){
-                        //Carts.order(new DataCarts(car.getIDMOBIL(),car.getNAMAMOBIL(),car.getMERKMOBIL(),car.getPLATNOMOBIL(),tgl_awal.getText().toString()+" "+jam,tgl_akhir.getText().toString()+" "+jam,car.getHARGAMOBIL(),""+(Integer.parseInt(car.getHARGAMOBIL())*(DateDifference.betweenDates(tgl_awal.getText().toString(),tgl_akhir.getText().toString())))), SPref.getCARTS());
+                        Carts.order(new DataCarts(car.getIDMOBIL(),car.getNAMAMOBIL(),car.getMERKMOBIL(),car.getPLATNOMOBIL(),tgl_awal.getText().toString()+" "+jam,tgl_akhir.getText().toString()+" "+jam,car.getHARGAMOBIL(),""+(Integer.parseInt(car.getHARGAMOBIL())*(DateDifference.betweenDates(tgl_awal.getText().toString(),tgl_akhir.getText().toString())))), SPref.getCARTS());
 
                         invalidateOptionsMenu();
                         Toasty.success(mContext,"Mobil Berhasil Disimpan",Toast.LENGTH_SHORT).show();
@@ -283,7 +281,7 @@ public class ActivityDetailUserCars extends AppCompatActivity implements InitCom
             badge = new DrawableCounter(mContext);
         }
 
-        //badge.setCount(""+Carts.getSize(SPref.getCARTS()));
+        badge.setCount(""+Carts.getSize(SPref.getCARTS()));
         icon.mutate();
         icon.setDrawableByLayerId(R.id.ic_group_count, badge);
     }
@@ -294,7 +292,7 @@ public class ActivityDetailUserCars extends AppCompatActivity implements InitCom
                 finish();
                 return true;
             case R.id.cart:
-                //move.moveActivity(mContext,ActivityListTransaksi.class);
+                move.moveActivity(mContext,ActivityListTransaksi.class);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
