@@ -1,6 +1,7 @@
 package com.rental_apps.android.rental_apps.api;
 
 
+import com.rental_apps.android.rental_apps.model.model_history.ResponseHistory;
 import com.rental_apps.android.rental_apps.model.model_mobil.ResponseCars;
 import com.rental_apps.android.rental_apps.model.model_mobil.ResponseRegisterCars;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseLogin;
@@ -106,6 +107,10 @@ public interface request{
                                              @Field("LIST_CART") String LIST_CART
     );
 
+    @GET("api/pesanan/history/{ID_USER}")
+    Call<ResponseHistory> dataHistory(
+            @Path("ID_USER") Integer ID_USER
+    );
 
 
 
