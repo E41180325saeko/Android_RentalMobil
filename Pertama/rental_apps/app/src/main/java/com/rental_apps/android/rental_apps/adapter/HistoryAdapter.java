@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.model.model_history.DataHistory;
+import com.rental_apps.android.rental_apps.user.ActivityDetailListHistory;
 
 import java.util.List;
 
@@ -51,9 +52,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
                 public void onClick(View view) {
                     Gson gson=new Gson();
                     String transaksi=gson.toJson(historyList.get(getAdapterPosition()));
-//                    Intent i=new Intent(mContext, ActivityDetailListHistory.class);
-//                    i.putExtra("transaksi",transaksi);
-//                    mContext.startActivity(i);
+                    Intent i=new Intent(mContext, ActivityDetailListHistory.class);
+                    i.putExtra("transaksi",transaksi);
+                    mContext.startActivity(i);
                 }
             });
         }

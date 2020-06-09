@@ -9,6 +9,8 @@ import com.rental_apps.android.rental_apps.model.model_user.ResponseRegister;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseUser;
 import com.rental_apps.android.rental_apps.model.model_mobil.DataCars;
 import com.rental_apps.android.rental_apps.model.model_transaksi.ResponseRegisterTransaksi;
+import com.rental_apps.android.rental_apps.model.model_detail_transaksi.ResponseCancelTransaksi;
+import com.rental_apps.android.rental_apps.model.model_detail_transaksi.ResponseDetailTransaksi;
 
 import org.json.JSONStringer;
 
@@ -111,6 +113,18 @@ public interface request{
     Call<ResponseHistory> dataHistory(
             @Path("ID_USER") Integer ID_USER
     );
+
+
+    @GET("Api/pesanan/{KODE_TRANSAKSI}")
+    Call<ResponseDetailTransaksi> dataDetailTransaksi(
+            @Path("KODE_TRANSAKSI") String KODE_TRANSAKSI
+    );
+
+    @DELETE("api/transaksi/{ID_DETAIL_TRANSAKSI}")
+    Call<ResponseCancelTransaksi> cancelTransaksi(
+            @Path("ID_DETAIL_TRANSAKSI") Integer ID_DETAIL_TRANSAKSI
+    );
+
 
 
 
