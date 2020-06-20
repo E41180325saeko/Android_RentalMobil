@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Pertama-rental_apps.iml" filepath="$PROJECT_DIR$/Pertama-rental_apps.iml" group="rental_apps" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="rental_apps/app" />
       <module fileurl="file://$PROJECT_DIR$/rental_apps.iml" filepath="$PROJECT_DIR$/rental_apps.iml" group="rental_apps" />
-      <module fileurl="file://$PROJECT_DIR$/app/rental_apps-app.iml" filepath="$PROJECT_DIR$/app/rental_apps-app.iml" group="rental_apps/app" />
     </modules>
   </component>
 </project>
