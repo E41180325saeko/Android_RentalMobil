@@ -4,28 +4,23 @@ package com.rental_apps.android.rental_apps.api;
 import com.rental_apps.android.rental_apps.model.model_history.ResponseHistory;
 import com.rental_apps.android.rental_apps.model.model_mobil.ResponseCars;
 import com.rental_apps.android.rental_apps.model.model_mobil.ResponseRegisterCars;
-import com.rental_apps.android.rental_apps.model.model_supir.ResponseSupir;
+import com.rental_apps.android.rental_apps.model.model_supir.RetroPhoto;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseLogin;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseRegister;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseUser;
-import com.rental_apps.android.rental_apps.model.model_mobil.DataCars;
 import com.rental_apps.android.rental_apps.model.model_transaksi.ResponseRegisterTransaksi;
 import com.rental_apps.android.rental_apps.model.model_detail_transaksi.ResponseCancelTransaksi;
 import com.rental_apps.android.rental_apps.model.model_detail_transaksi.ResponseDetailTransaksi;
 
-import org.json.JSONStringer;
-
-import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
-import retrofit2.http.Part;
 import retrofit2.http.Path;
 
 
@@ -110,7 +105,7 @@ public interface request{
                                              @Field("LIST_CART") String LIST_CART
     );
     @GET("api/supir")
-    Call<ResponseSupir> dataSupir();
+    Call<List<RetroPhoto>> dataSupir();
 
     @GET("api/pesanan/history/{ID_USER}")
     Call<ResponseHistory> dataHistory(
