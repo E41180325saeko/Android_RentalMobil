@@ -4,6 +4,7 @@ package com.rental_apps.android.rental_apps.api;
 import com.rental_apps.android.rental_apps.model.model_history.ResponseHistory;
 import com.rental_apps.android.rental_apps.model.model_mobil.ResponseCars;
 import com.rental_apps.android.rental_apps.model.model_mobil.ResponseRegisterCars;
+import com.rental_apps.android.rental_apps.model.model_supir.ResponseSupir;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseLogin;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseRegister;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseUser;
@@ -108,11 +109,15 @@ public interface request{
                                              @Field("TOTAL_PEMBAYARAN") String TOTAL_PEMBAYARAN,
                                              @Field("LIST_CART") String LIST_CART
     );
+    @GET("api/supir")
+    Call<ResponseSupir> dataSupir();
 
     @GET("api/pesanan/history/{ID_USER}")
     Call<ResponseHistory> dataHistory(
             @Path("ID_USER") Integer ID_USER
     );
+
+
 
 
     @GET("Api/pesanan/{KODE_TRANSAKSI}")

@@ -109,6 +109,7 @@
     <color name="nliveo_teal_colorPrimary">#009688</color>
     <color name="nliveo_teal_colorPrimaryDark">#00796B</color>
     <color name="nliveo_teal_alpha_colorPrimaryDark">#8000796B</color>
+    <color name="dadakan">#2E8B57</color>
 
     <color name="nliveo_blue_grey_colorPrimary">#607D8B</color>
     <color name="nliveo_blue_grey_colorPrimaryDark">#80455A64</color>

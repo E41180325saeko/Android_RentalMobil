@@ -17,6 +17,7 @@ import com.rental_apps.android.rental_apps.model.model_user.ResponseRegister;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
 import com.rental_apps.android.rental_apps.utils.validate;
 
+import customfonts.MyTextView;
 import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,6 +35,7 @@ public class ActivityRegister extends AppCompatActivity implements InitComponent
     private EditText etEmail;
     private EditText etPassword;
     private EditText etConfirmPassword;
+    private MyTextView txt_login;
     private Character JK;
     private RadioButton rbl;
     private RadioButton rbp;

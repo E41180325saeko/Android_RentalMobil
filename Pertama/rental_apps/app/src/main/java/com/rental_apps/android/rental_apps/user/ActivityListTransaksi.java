@@ -57,6 +57,7 @@ public class ActivityListTransaksi extends AppCompatActivity implements InitComp
     public void initToolbar() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Keranjang");
     }
 
     @Override

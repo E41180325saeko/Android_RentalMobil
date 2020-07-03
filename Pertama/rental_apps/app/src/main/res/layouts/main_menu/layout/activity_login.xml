@@ -3,19 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login">
+    android:background="@drawable/senja">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000"
         android:alpha="0.5"
-        />
+        android:background="#000" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/green"
+        android:src="@drawable/redjotrans"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"/>
     <TextView
@@ -128,13 +128,13 @@
                 android:layout_height="wrap_content"
                 android:text="Create Account"
                 android:textColor="#FFF"/>
-            <customfonts.MyTextView
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Need Help ?"
-                android:textColor="#FFF"
-                android:gravity="end"/>
+<!--            <customfonts.MyTextView-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Need Help ?"-->
+<!--                android:textColor="#FFF"-->
+<!--                android:gravity="end"/>-->
         </LinearLayout>
 
 

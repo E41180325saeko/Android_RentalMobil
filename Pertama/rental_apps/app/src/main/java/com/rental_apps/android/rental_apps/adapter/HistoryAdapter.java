@@ -70,10 +70,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
             total_transaksi.setText("Rp. "+String.format("%,.2f", Double.parseDouble(transaksi.getTOTALPEMBAYARAN().toString())));
 
             if (transaksi.getSTATUSPEMBAYARAN().equals("0")){
-                bg_transaksi.setBackgroundColor(Color.parseColor("#da4749"));
+                bg_transaksi.setBackgroundColor(Color.parseColor("#4682B4"));
                 status.setText("Belum Lunas");
             }else{
-                bg_transaksi.setBackgroundColor(Color.parseColor("#29A9E1"));
+                bg_transaksi.setBackgroundColor(Color.parseColor("#2E8B57"));
                 status.setText("Lunas");
             }
         }

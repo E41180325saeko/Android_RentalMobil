@@ -3,19 +3,41 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/nama_supir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Supir"/>
+        android:text="Nama Supir" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rHistoryDriverList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_below="@+id/nama_supir"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:scrollingCache="true">
     </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/Kembali"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rHistoryDriverList"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Kembali" />
+
+    <Button
+        android:id="@+id/Lanjut"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rHistoryDriverList"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/Kembali"
+        android:text="Lanjut" />
 
 </RelativeLayout>

@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nama Mobil"
                 android:layout_marginRight="50dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/dadakan"
                 android:textSize="14sp"
                 android:layout_marginBottom="10sp"
                 android:textStyle="bold"
@@ -65,7 +65,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2017"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/dadakan"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -87,7 +87,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="8"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/dadakan"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -125,7 +125,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="White"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/dadakan"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -147,7 +147,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Premium"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/dadakan"
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -176,7 +176,7 @@
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@color/dadakan"
                 android:padding="5sp"
                 android:text="Rp. 100.000"
                 android:textAlignment="center"

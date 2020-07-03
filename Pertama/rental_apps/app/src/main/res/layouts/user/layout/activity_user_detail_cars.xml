@@ -35,6 +35,7 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
+            android:background="@color/dadakan"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
@@ -55,6 +56,7 @@
                 android:id="@+id/maintoolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="-30dp"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_collapseMode="pin"
                 />
@@ -165,7 +167,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
                             android:text="2017"
-                            android:textColor="@color/nliveo_orange_colorPrimaryDark"
+                            android:textColor="@color/dadakan"
                             />
                     </LinearLayout>
 
@@ -198,7 +200,7 @@
                             android:layout_height="match_parent"
                             android:textSize="12sp"
                             android:text="2017"
-                            android:textColor="@color/nliveo_orange_colorPrimaryDark"
+                            android:textColor="@color/dadakan"
                             android:gravity="bottom"
                             />
                     </LinearLayout>
@@ -230,7 +232,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
                             android:text="2017"
-                            android:textColor="@color/nliveo_orange_colorPrimaryDark"
+                            android:textColor="@color/dadakan"
                             />
                     </LinearLayout>
                 </LinearLayout>
@@ -268,7 +270,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
                             android:text="2017"
-                            android:textColor="@color/nliveo_orange_colorPrimaryDark"
+                            android:textColor="@color/dadakan"
                             />
                     </LinearLayout>
                     <TextView
@@ -299,7 +301,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
                             android:text="2017"
-                            android:textColor="@color/nliveo_orange_colorPrimaryDark"
+                            android:textColor="@color/dadakan"
                             />
                     </LinearLayout>
                     <TextView
@@ -331,7 +333,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
                             android:text="2017"
-                            android:textColor="@color/nliveo_orange_colorPrimaryDark"
+                            android:textColor="@color/dadakan"
                             />
                     </LinearLayout>
                 </LinearLayout>
@@ -341,6 +343,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
+                android:textColor="@android:color/black"
                 android:lineSpacingExtra="8dp"
                 android:text="@string/lorem_ipsum"
                 android:padding="@dimen/activity_horizontal_margin"
@@ -357,12 +360,15 @@
                     android:layout_weight="1"
                     android:layout_marginLeft="16dp"
                     android:orientation="vertical">
+
+
                     <customfonts.MyTextView
                         android:id="@+id/colortext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="Tanggal Pinjam"
+                        android:textStyle="bold"
                         android:textColor="@color/Tex"
                         android:textSize="@dimen/text" />
                 </LinearLayout>
@@ -379,6 +385,7 @@
                             android:layout_marginTop="16dp"
                             android:layout_marginLeft="16dp"
                             android:text="Tanggal Kembali"
+                            android:textStyle="bold"
                             android:textColor="@color/Tex"
                             android:textSize="@dimen/text" />
                     </LinearLayout>

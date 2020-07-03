@@ -53,7 +53,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
 
         with(this).startingPosition(0)
                 .addAllHelpItem(mHelpLiveo.getHelp())
-                .selectorCheck(R.color.nliveo_purple_colorPrimaryDark)
+                .selectorCheck(R.color.dadakan)
                 .colorItemDefault(R.color.white)
                 .colorItemSelected(R.color.white)
                 .backgroundList(R.color.nliveo_black_light)

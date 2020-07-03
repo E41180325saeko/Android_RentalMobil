@@ -204,6 +204,4 @@ public class UserListCars extends Fragment implements InitComponent {
         getActivity().invalidateOptionsMenu();
     }
 
-
-
 }

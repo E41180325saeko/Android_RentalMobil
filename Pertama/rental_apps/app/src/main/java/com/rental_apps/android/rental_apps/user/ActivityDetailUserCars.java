@@ -3,6 +3,7 @@ package com.rental_apps.android.rental_apps.user;
 import android.annotation.SuppressLint;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
@@ -71,7 +72,7 @@ public class ActivityDetailUserCars extends AppCompatActivity implements InitCom
     private DatePickerView tgl_akhir;
     private MyTextView add_cart;
     private TextView tvTimeResult;
-    private Button btTimePicker;
+    private Button btTimePicker, buttons;
     private TimePickerDialog timePickerDialog;
     private String jam;
 
@@ -86,6 +87,7 @@ public class ActivityDetailUserCars extends AppCompatActivity implements InitCom
         startInit();
 
         tvTimeResult = (TextView) findViewById(R.id.tv_timeresult);
+
 
     }
 
